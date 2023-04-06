@@ -1,0 +1,17 @@
+div{
+    width: 700px;
+    margin: auto;
+}
+body{
+    background-color: pink;
+}
+h1{
+    color: rgb(204, 111, 204);
+    text-align: center;
+    font-size: 85px;
+    margin-top: 10px;
+}
+p{
+    font-size: 45px;
+    text-align: center;
+}

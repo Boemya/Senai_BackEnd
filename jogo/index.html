@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div>
+    <h1>PEDRA, PAPEL E TESOURA</h1>
+    <P>Escolha uma opção: </P>
+    <button onclick="jogar(1)">
+        <img src="pedra-reverse.jpg" width="200px" height="200px" alt="Pedra">
+    </button>
+    <button onclick="jogar(2)">
+        <img src="papel-reverse.jpg" width="200px" height="200px" alt="Papel">
+    </button>
+    <button onclick="jogar(3)">
+        <img src="tesoura-reverse.jpg"width="200px" height="200px" alt="Tesoura">
+    </button>
+    <p id="resultado"></p>
+
+   </div>
+
+    <script>
+        function jogar(escolhaDoUsuario){
+            const escolhaDoComputador = Math.floor(Math.random()*3)+1
+            let resultado =""
+
+            if (escolhaDoUsuario == escolhaDoComputador){
+                resultado = "Empate"
+            }
+            else if (escolhaDoUsuario == 1 && escolhaDoComputador == 2){
+                resultado ="Vitória do computador"
+            }
+            else if (escolhaDoUsuario == 1 && escolhaDoComputador == 3){
+                resultado ="Vitória do Jogador"
+            }
+            else if (escolhaDoUsuario == 2 && escolhaDoComputador == 1){
+                resultado ="Vitória do Jogador"
+            }
+            else if (escolhaDoUsuario == 2 && escolhaDoComputador == 3){
+                resultado ="Vitória do Computador"
+            }
+            else if (escolhaDoUsuario == 3 && escolhaDoComputador == 1){
+                resultado ="Vitória do Computador"
+            }
+            else if (escolhaDoUsuario == 3 && escolhaDoComputador == 2){
+                resultado ="Vitória do Jogador"
+            }
+            document.getElementById("resultado").innerHTML = resultado
+         }
+
+    </script>
+
+</body>
+</html>
