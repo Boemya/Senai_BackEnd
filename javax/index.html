@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <img src="meme.jpg" alt="lula_love_bolsonaro" id ="love">
+</head>
+<body>
+    <h1>Verificação de Voto</h1>
+    <p>Informe sua idade:</p>
+    <input type="text" id="Idade">
+    <button onclick="verificaVoto()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificaVoto(){
+            const Idade = document.getElementById("Idade").value 
+            const resultado = document.getElementById("resultado")
+            if(Idade<16){
+        resultado.innerHTML="Nâo vota"
+            }
+        else if(Idade>=18 && Idade<70){
+        resultado.innerHTML="Voto Obrigatório"           
+            }
+         else{
+        resultado.innerHTML="Voto NÃO Obrigatório"
+         }
+        }
+    </script>
+
+</body>
+</html>
